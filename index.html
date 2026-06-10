@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青禾口腔 — 重庆两江新区专业口腔诊疗</title>
+<meta name="description" content="青禾口腔是重庆两江新区专业口腔诊所，南山花园和保利观澜双店服务。提供种植牙、牙齿矫正、洗牙、拔牙、补牙、牙齿美白等全科口腔诊疗服务。">
+<meta name="keywords" content="青禾口腔,重庆牙科,两江新区口腔,种植牙,牙齿矫正,洗牙,拔牙,补牙,牙齿美白">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+<style>
+  :root { --primary: #02877a; --primary-light: #e6f7f5; --text: #333; --text-light: #666; --bg: #fafafa; --white: #fff; --border: #e8e8e8; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  /* Nav */
+  nav { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+  nav .container { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; padding-bottom: 16px; }
+  nav .logo { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; color: var(--primary); letter-spacing: 2px; }
+  nav .logo img { height: 36px; }
+  nav .logo span { font-size: 14px; font-weight: 400; color: var(--text-light); margin-left: 4px; }
+  nav .nav-links { display: flex; gap: 32px; }
+  nav .nav-links a { text-decoration: none; color: var(--text); font-size: 15px; transition: color .2s; }
+  nav .nav-links a:hover { color: var(--primary); }
+  /* Hero */
+  .hero { background: linear-gradient(135deg, var(--primary) 0%, #00a896 100%); color: var(--white); padding: 100px 0 80px; text-align: center; }
+  .hero h1 { font-size: 42px; font-weight: 700; margin-bottom: 16px; letter-spacing: 2px; }
+  .hero p { font-size: 18px; opacity: .9; max-width: 600px; margin: 0 auto 32px; }
+  .hero .badges { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+  .hero .badge { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); padding: 10px 24px; border-radius: 50px; font-size: 14px; backdrop-filter: blur(4px); }
+  /* Sections */
+  section { padding: 80px 0; }
+  section.alt { background: var(--white); }
+  .section-title { text-align: center; margin-bottom: 56px; }
+  .section-title h2 { font-size: 32px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+  .section-title p { color: var(--text-light); font-size: 16px; }
+  /* Services Grid */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 40px 32px; transition: transform .2s, box-shadow .2s; }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+  .service-card .icon { font-size: 40px; margin-bottom: 16px; }
+  .service-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--text); }
+  .service-card p { color: var(--text-light); font-size: 15px; }
+  /* Doctors */
+  .doctors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+  .doctor-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-align: center; padding: 40px 32px; }
+  .doctor-card .avatar { width: 100px; height: 100px; border-radius: 50%; background: var(--primary-light); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 40px; }
+  .doctor-card h3 { font-size: 22px; margin-bottom: 4px; }
+  .doctor-card .title { color: var(--primary); font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+  .doctor-card .specialty { color: var(--text-light); font-size: 15px; }
+  .doctor-card .tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+  .doctor-card .tag { background: var(--primary-light); color: var(--primary); padding: 4px 16px; border-radius: 20px; font-size: 13px; }
+  /* Locations */
+  .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px; }
+  .location-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 36px 32px; }
+  .location-card h3 { font-size: 22px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .location-card .info-line { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; color: var(--text-light); font-size: 15px; }
+  /* Articles */
+  .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+  .article-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px 28px 20px; text-decoration: none; color: var(--text); transition: transform .2s, box-shadow .2s; display: block; }
+  .article-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+  .article-card .date { font-size: 12px; color: var(--text-light); margin-bottom: 8px; }
+  .article-card h3 { font-size: 18px; margin-bottom: 8px; color: var(--text); }
+  .article-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+  .article-card .tag { display: inline-block; background: var(--primary-light); color: var(--primary); padding: 2px 12px; border-radius: 12px; font-size: 12px; margin-top: 12px; }
+  .article-page { max-width: 760px; margin: 0 auto; padding: 60px 24px; }
+  .article-page h1 { font-size: 28px; margin-bottom: 12px; }
+  .article-page .meta { color: var(--text-light); font-size: 14px; margin-bottom: 36px; }
+  .article-page .content { font-size: 16px; line-height: 1.9; color: var(--text); }
+  .article-page .content h2 { font-size: 22px; margin: 36px 0 16px; color: var(--primary); }
+  .article-page .content p { margin-bottom: 16px; }
+  .article-page .content ul { margin-bottom: 16px; padding-left: 24px; }
+  .article-page .content li { margin-bottom: 8px; }
+  .article-page .back { display: inline-block; margin-bottom: 32px; color: var(--primary); text-decoration: none; font-size: 15px; }
+  .article-page .back:hover { text-decoration: underline; }
+  /* CTA */
+  .cta { background: var(--primary); color: var(--white); text-align: center; }
+  .cta h2 { font-size: 28px; margin-bottom: 12px; }
+  .cta p { opacity: .9; margin-bottom: 24px; font-size: 16px; }
+  .btn { display: inline-block; padding: 14px 40px; border-radius: 50px; font-size: 16px; text-decoration: none; transition: all .2s; cursor: pointer; border: none; }
+  .btn-white { background: var(--white); color: var(--primary); font-weight: 600; }
+  .btn-white:hover { background: #f0f0f0; transform: translateY(-1px); }
+  /* Footer */
+  footer { background: #1a1a1a; color: #999; padding: 40px 0; font-size: 14px; text-align: center; }
+  footer a { color: #ccc; text-decoration: none; }
+  /* Gallery */
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform .2s; }
+  .gallery img:hover { transform: scale(1.03); }
+  /* Lightbox */
+  .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.9); z-index: 200; justify-content: center; align-items: center; cursor: pointer; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90%; max-height: 90%; border-radius: 4px; }
+  /* Mobile */
+  @media (max-width: 768px) {
+    nav .nav-links { display: none; }
+    .hero h1 { font-size: 30px; }
+    .services-grid, .doctors-grid, .locations-grid { grid-template-columns: 1fr; }
+    section { padding: 56px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ======== Schema Markup ======== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "青禾口腔",
+  "description": "青禾口腔是重庆两江新区专业口腔诊所，提供种植牙、牙齿矫正、洗牙、拔牙、补牙、牙齿美白等全科口腔诊疗服务。",
+  "url": "https://www.example.com",
+  "telephone": ["17353235482", "19398395459"],
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "南山花园1号附2号",
+      "addressLocality": "重庆市",
+      "addressRegion": "两江新区",
+      "addressCountry": "CN"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "凤澜路82号附14",
+      "addressLocality": "重庆市",
+      "addressRegion": "两江新区",
+      "addressCountry": "CN"
+    }
+  ],
+  "openingHours": "Mo-Su 09:00-18:00",
+  "priceRange": "¥",
+  "employee": [
+    {
+      "@type": "Physician",
+      "name": "陈娇",
+      "medicalSpecialty": "儿牙、早期矫正",
+      "jobTitle": "主治医师"
+    },
+    {
+      "@type": "Physician",
+      "name": "刘剑霞",
+      "medicalSpecialty": "根管治疗、牙齿贴面",
+      "jobTitle": "主治医师"
+    }
+  ],
+  "makesOffer": [
+    {"@type": "MedicalProcedure", "name": "种植牙", "description": "采用国际先进种植系统，恢复咀嚼功能和美观"},
+    {"@type": "MedicalProcedure", "name": "牙齿矫正", "description": "儿童早期矫正、青少年及成人正畸治疗"},
+    {"@type": "MedicalProcedure", "name": "洗牙", "description": "超声波洁牙，清除牙结石和牙菌斑"},
+    {"@type": "MedicalProcedure", "name": "拔牙", "description": "微创拔牙、智齿拔除"},
+    {"@type": "MedicalProcedure", "name": "补牙", "description": "树脂/嵌体修复龋齿和牙体缺损"},
+    {"@type": "MedicalProcedure", "name": "牙齿美白", "description": "冷光美白、居家美白方案"}
+  ]
+}
+</script>
+
+<!-- ======== Nav ======== -->
+<nav>
+  <div class="container">
+    <div class="logo"><img src="images/艾芽青禾logo.png" alt="青禾口腔">青禾口腔<span>两江新区</span></div>
+    <div class="nav-links">
+      <a href="#about">关于我们</a>
+      <a href="#services">诊疗项目</a>
+      <a href="#doctors">医生团队</a>
+      <a href="#locations">门诊地址</a>
+      <a href="#articles">健康科普</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== Hero ======== -->
+<section class="hero">
+  <div class="container">
+    <h1>守护每一颗牙齿的健康</h1>
+    <p>青禾口腔深耕两江新区，双店服务，为您提供种植、矫正、修复、美白等全科口腔诊疗</p>
+    <div class="badges">
+      <div class="badge">🦷 主治医师团队</div>
+      <div class="badge">🏥 双店覆盖</div>
+      <div class="badge">💡 数字化诊疗</div>
+      <div class="badge">🤝 医保定点（以实际政策为准）</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== About ======== -->
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>关于青禾口腔</h2>
+      <p>扎根两江新区，用专业和温度服务每一位患者</p>
+    </div>
+    <div style="max-width:800px;margin:0 auto;font-size:16px;color:var(--text-light);text-align:center;">
+      <p style="margin-bottom:16px;">青禾口腔是重庆两江新区专业的口腔诊疗机构，下设<strong>南山花园店</strong>和<strong>保利观澜店</strong>，两店均配备先进的数字化口腔设备，为周边居民提供便捷、安全、舒适的口腔健康服务。</p>
+      <p>我们坚持"医德为本、技术为先"的理念，由经验丰富的主治医师团队坐诊，在种植牙、牙齿矫正、美学修复等领域积累了丰富的临床案例，致力于让每一位患者重获自信笑容。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Services ======== -->
+<section id="services" class="alt">
+  <div class="container">
+    <div class="section-title">
+      <h2>诊疗项目</h2>
+      <p>覆盖口腔全科，满足您和家人的牙齿健康需求</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">🦷</div>
+        <h3>种植牙</h3>
+        <p>采用国际先进种植系统，通过数字化导板精准植入，恢复自然咀嚼功能和美观。种植牙成功率高达95%以上，使用寿命可超20年。</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🦷</div>
+        <h3>牙齿矫正</h3>
+        <p>儿童早期干预矫正、青少年固定矫正、成人隐形矫正。针对不同年龄段提供个性化方案，改善咬合关系，提升面部美观。</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">✨</div>
+        <h3>洗牙</h3>
+        <p>超声波洁牙配合喷砂抛光，彻底清除牙结石和牙菌斑。建议每6-12个月洗牙一次，有效预防牙周疾病。</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🔧</div>
+        <h3>拔牙</h3>
+        <p>微创拔牙技术，包括常规牙拔除、阻生智齿拔除。术前精准评估，术中舒适无痛，术后恢复快。</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🛡️</div>
+        <h3>补牙</h3>
+        <p>纳米树脂充填、瓷嵌体修复龋齿和牙体缺损。颜色自然逼真，强度高耐磨损，还原牙齿健康形态。</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">💎</div>
+        <h3>牙齿美白</h3>
+        <p>冷光美白和居家美白方案，有效去除烟渍、茶渍、咖啡渍等外源性色素沉着，恢复牙齿自然亮白光泽。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Doctors ======== -->
+<section id="doctors">
+  <div class="container">
+    <div class="section-title">
+      <h2>医生团队</h2>
+      <p>主治医师坐诊，专业守护您的口腔健康</p>
+    </div>
+    <div class="doctors-grid">
+      <div class="doctor-card">
+        <div class="avatar">👩‍⚕️</div>
+        <h3>陈娇</h3>
+        <div class="title">主治医师</div>
+        <p class="specialty">儿童齿科 · 早期矫正</p>
+        <div class="tags">
+          <span class="tag">儿牙</span>
+          <span class="tag">早期矫正</span>
+          <span class="tag">龋齿防治</span>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div class="avatar">👩‍⚕️</div>
+        <h3>刘剑霞</h3>
+        <div class="title">主治医师</div>
+        <p class="specialty">根管治疗 · 牙齿贴面</p>
+        <div class="tags">
+          <span class="tag">根管治疗</span>
+          <span class="tag">贴面修复</span>
+          <span class="tag">美学修复</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Locations ======== -->
+<section id="locations" class="alt">
+  <div class="container">
+    <div class="section-title">
+      <h2>门诊地址</h2>
+      <p>两家门店覆盖两江新区，方便您就近就诊</p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card">
+        <h3>📍 南山花园店</h3>
+        <div class="info-line">🏠 重庆市两江新区南山花园1号附2号</div>
+        <div class="info-line">🕐 营业时间：09:00 – 18:00</div>
+        <div class="info-line">📞 电话：173 5323 5482</div>
+      </div>
+      <div class="location-card">
+        <h3>📍 保利观澜店</h3>
+        <div class="info-line">🏠 重庆市两江新区凤澜路82号附14（溉澜溪地铁站1A口步行260米）</div>
+        <div class="info-line">🕐 营业时间：09:00 – 18:00</div>
+        <div class="info-line">📞 电话：193 9839 5459</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Gallery ======== -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>诊疗环境</h2>
+      <p>温馨舒适的就诊环境，先进的数字化设备</p>
+    </div>
+    <div class="gallery" id="galleryGrid">
+    </div>
+  </div>
+</section>
+
+<!-- ======== Lightbox ======== -->
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<!-- ======== Articles ======== -->
+<section id="articles" class="alt">
+  <div class="container">
+    <div class="section-title">
+      <h2>健康科普</h2>
+      <p>口腔健康知识，让您更懂自己的牙齿</p>
+    </div>
+    <div class="articles-grid" id="articlesGrid">
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA ======== -->
+<section class="cta">
+  <div class="container">
+    <h2>预约就诊 · 守护口腔健康</h2>
+    <p>欢迎致电或到店咨询，我们的专业团队将为您提供一对一诊疗方案</p>
+    <a href="#locations" class="btn btn-white">查看门诊地址 →</a>
+  </div>
+</section>
+
+<!-- ======== Footer ======== -->
+<footer>
+  <div class="container">
+    <p>青禾口腔 · 重庆两江新区 · 南山花园 | 保利观澜</p>
+    <p style="margin-top:8px;">备案号：待备案完成后更新</p>
+  </div>
+</footer>
+
+<script>
+// Environment gallery
+const envImages = [
+  "images/env/微信图片_2025-05-05_173358_786.jpg",
+  "images/env/微信图片_2025-05-05_173432_512.jpg",
+  "images/env/微信图片_2025-05-05_173447_674.jpg",
+  "images/env/微信图片_2025-05-05_173452_371.jpg",
+  "images/env/微信图片_2025-05-05_173456_867.jpg",
+  "images/env/微信图片_2025-05-05_173506_313.jpg",
+  "images/env/微信图片_2025-05-05_173524_014.jpg",
+  "images/env/微信图片_2025-05-05_173534_160.jpg",
+  "images/env/微信图片_2025-05-05_173540_078.jpg",
+  "images/env/微信图片_2025-05-05_173555_224.jpg",
+  "images/env/微信图片_2025-05-05_173604_307.jpg",
+  "images/env/微信图片_2025-05-05_173608_466.jpg",
+  "images/env/微信图片_2025-05-05_173613_017.jpg",
+  "images/env/微信图片_2025-05-05_173617_715.jpg",
+  "images/env/微信图片_2025-05-06_203607_191.jpg",
+];
+const articlesData = [
+  { title: "种植牙全过程详解：从检查到戴冠需要几步？", date: "2026-06-09", tag: "口腔修复", desc: "缺牙怎么办？种植牙从术前检查、植入手术到戴冠的全流程详解，解答您最关心的问题。", file: "articles/zhongzhiya-quanguocheng.html" }
+  // 以后每写一篇文章，在这里加一条即可
+];
+const articlesGrid = document.getElementById("articlesGrid");
+articlesData.forEach(a => {
+  const card = document.createElement("a");
+  card.href = a.file;
+  card.className = "article-card";
+  card.innerHTML = '<div class="date">' + a.date + '</div><h3>' + a.title + '</h3><p>' + a.desc + '</p><span class="tag">' + a.tag + '</span>';
+  articlesGrid.appendChild(card);
+});
+const grid = document.getElementById('galleryGrid');
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightboxImg');
+envImages.forEach(src => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = '青禾口腔诊疗环境';
+  img.loading = 'lazy';
+  img.onclick = () => { lbImg.src = src; lb.classList.add('active'); };
+  grid.appendChild(img);
+});
+</script>
+</body>
+</html>
