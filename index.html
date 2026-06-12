@@ -3,9 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://qinghekouqiang.com/">
 <title>青禾口腔 — 重庆两江新区专业口腔诊疗</title>
 <meta name="description" content="青禾口腔是重庆两江新区专业口腔诊所，南山花园和保利观澜双店服务。提供种植牙、牙齿矫正、洗牙、拔牙、补牙、牙齿美白等全科口腔诊疗服务。">
 <meta name="keywords" content="青禾口腔,重庆牙科,两江新区口腔,种植牙,牙齿矫正,洗牙,拔牙,补牙,牙齿美白">
+<meta property="og:title" content="青禾口腔 — 重庆两江新区专业口腔诊疗">
+<meta property="og:description" content="青禾口腔是重庆两江新区专业口腔诊所，南山花园和保利观澜双店服务。种植牙、牙齿矫正、洗牙、拔牙、补牙、牙齿美白。">
+<meta property="og:image" content="https://qinghekouqiang.com/images/艾芽青禾logo.png">
+<meta property="og:url" content="https://qinghekouqiang.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
 <style>
   :root { --primary: #02877a; --primary-light: #e6f7f5; --text: #333; --text-light: #666; --bg: #fafafa; --white: #fff; --border: #e8e8e8; }
@@ -153,6 +161,46 @@
     {"@type": "MedicalProcedure", "name": "拔牙", "description": "微创拔牙、智齿拔除"},
     {"@type": "MedicalProcedure", "name": "补牙", "description": "树脂/嵌体修复龋齿和牙体缺损"},
     {"@type": "MedicalProcedure", "name": "牙齿美白", "description": "冷光美白、居家美白方案"}
+  ]
+}
+</script>
+
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "青禾口腔在重庆两江新区哪里？",
+      "acceptedAnswer": {"@type": "Answer", "text": "青禾口腔有两家店：南山花园店在重庆市两江新区南山花园1号附2号（电话17353235482），保利观澜店在凤澜路82号附14，溉澜溪地铁站1A口步行260米（电话19398395459）。营业时间每天9:00-18:00。"}
+    },
+    {
+      "@type": "Question",
+      "name": "青禾口腔可以做种植牙吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "可以。青禾口腔采用国际先进种植系统，提供从术前检查、植入手术到戴冠的全流程种植牙服务。种植牙是修复缺牙的首选方案，维护得当可使用20年以上。"}
+    },
+    {
+      "@type": "Question",
+      "name": "青禾口腔可以做儿童牙齿矫正吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "可以。陈娇医生专长儿童牙科和早期矫正，提供儿童早期干预矫正、青少年正畸及成人牙齿矫正服务。具体方案需到院检查后确定。"}
+    },
+    {
+      "@type": "Question",
+      "name": "拔智齿疼不疼？青禾口腔怎么拔牙？",
+      "acceptedAnswer": {"@type": "Answer", "text": "青禾口腔采用微创拔牙技术，术前充分麻醉，术中基本无痛。拔智齿根据难度分为普通拔除和阻生智齿拔除，医生会在术前拍片评估并告知方案。术后遵医嘱护理，一般3-5天恢复。"}
+    },
+    {
+      "@type": "Question",
+      "name": "洗牙需要多久？多久洗一次？",
+      "acceptedAnswer": {"@type": "Answer", "text": "超声波洁牙一般30-60分钟完成。建议每6-12个月洗一次牙，定期洁牙能有效预防牙周炎、去除牙结石和烟渍茶渍。青禾口腔使用超声波洁牙设备，过程舒适。"}
+    },
+    {
+      "@type": "Question",
+      "name": "牙齿美白安全吗？能白几个度？",
+      "acceptedAnswer": {"@type": "Answer", "text": "青禾口腔提供冷光美白和居家美白两种方案，由专业医生操作，安全可控。美白效果因人而异，一般可提升2-6个色阶。医生会根据您的牙齿情况推荐最适合的方案。"}
+    }
   ]
 }
 </script>
@@ -379,10 +427,27 @@ articlesData.forEach(a => {
 const grid = document.getElementById('galleryGrid');
 const lb = document.getElementById('lightbox');
 const lbImg = document.getElementById('lightboxImg');
-envImages.forEach(src => {
+const altTexts = [
+  "青禾口腔候诊区——明亮舒适的接待大厅",
+  "青禾口腔前台接待区",
+  "青禾口腔诊室走廊——整洁的诊疗环境",
+  "青禾口腔独立诊室——牙科综合治疗台",
+  "青禾口腔诊疗区——全景牙片机",
+  "青禾口腔消毒室——高温高压灭菌设备",
+  "青禾口腔儿童诊室——温馨的儿牙治疗区",
+  "青禾口腔手术室——种植牙专用手术间",
+  "青禾口腔候诊区——沙发休息区",
+  "青禾口腔咨询室——一对一方案沟通",
+  "青禾口腔诊疗室——显微镜根管治疗设备",
+  "青禾口腔洁牙室——超声波洁牙区",
+  "青禾口腔正畸室——牙齿矫正治疗区",
+  "青禾口腔洗消间——器械清洗消毒流程",
+  "青禾口腔修复室——牙冠制作与试戴区",
+];
+envImages.forEach((src, i) => {
   const img = document.createElement('img');
   img.src = src;
-  img.alt = '青禾口腔诊疗环境';
+  img.alt = altTexts[i] || '青禾口腔诊疗环境';
   img.loading = 'lazy';
   img.onclick = () => { lbImg.src = src; lb.classList.add('active'); };
   grid.appendChild(img);
